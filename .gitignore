@@ -1,0 +1,51 @@
+# ========================
+# Backend (Maven / Java)
+# ========================
+backend/target/
+backend/.mvn/
+backend/*.iml
+backend/.classpath
+backend/.project
+backend/.settings/
+
+# ========================
+# Frontend (Node / Vite)
+# ========================
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# ========================
+# IDE / Editor
+# ========================
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+
+# ========================
+# OS
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Environment / Secrets
+# ========================
+.env
+.env.local
+.env.*.local
+
+# ========================
+# Logs
+# ========================
+*.log
+logs/
+
+# ========================
+# Misc
+# ========================
+*.class
+*.jar
+!**/test/*.jar
