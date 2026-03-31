@@ -21,6 +21,15 @@ public class JwtUtil {
     
     @Value("${jwt.expiration}")
     private Long expiration;
+
+    public JwtUtil() {
+        // Default constructor
+    }
+
+    public JwtUtil(String secret, Long expiration) {
+        this.secret = secret;
+        this.expiration = expiration;
+    }
     
     private SecretKey getSigningKey() {
         // Ensure secret is at least 32 bytes for HS256
@@ -50,7 +59,7 @@ public class JwtUtil {
         return claimsResolver.apply(claims);
     }
     
-    private Claims extractAllClaims(String token) {
+    public Claims extractAllClaims(String token) {
         return Jwts.parser()
                 .verifyWith(getSigningKey())
                 .build()
